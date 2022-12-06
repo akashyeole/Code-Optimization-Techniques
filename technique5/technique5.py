@@ -10,7 +10,6 @@ for line in inputfile:
         operator_separated_token = [token.strip() for token in re.split(r"(/\s*|\+|-|\*|\%|\/)", eq_separated_token[1])]
         expression = " "
         for token in operator_separated_token:
-            # print(token)
             if(cons_var_table.get(token) != None):
                 expression += " " + cons_var_table[token]
             else:

@@ -6,7 +6,8 @@ variables_table = {}
 for line in inputfile:
     eq_separated_token = [token.strip() for token in line.strip().split('=')]
     if(len(eq_separated_token) > 1):
-        variables_table[eq_separated_token[0]] = False
+        if(variables_table.get(eq_separated_token[0]) == None):
+            variables_table[eq_separated_token[0]] = False
         operator_separated_token = [token.strip() for token in re.split(r"/\s*|\+|-|\*|\%|\/", eq_separated_token[1]) if token.strip().isalpha()]
         for var in operator_separated_token:
             variables_table[var] = True
