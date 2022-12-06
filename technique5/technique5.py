@@ -2,7 +2,6 @@
 import re
 inputfile = open("technique5/technique5_input.txt", "r")
 outputfile = open("technique5/technique5_output.txt", "w")
-loop = False
 cons_var_table = {'+': '+', '-': '-', '/': '/', '%': '%', '*': '*'}
 for line in inputfile:
     eq_separated_token = [token.strip() for token in line.strip().split('=')]

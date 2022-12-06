@@ -18,7 +18,8 @@ for line in inputfile:
         outputfile.write(line)
         stk += ['{']
     elif line.strip() in ["break;", "continue;", "return 0;"]:
-        outputfile.write(line)
+        if(line.strip() != "continue;"):
+            outputfile.write(line)
         f = True
     elif(not f):
         outputfile.write(line)
