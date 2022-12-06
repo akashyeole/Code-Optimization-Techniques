@@ -1,0 +1,10 @@
+int main(){
+    for(int i = 0; i < n; i++){
+        cout << i << endl;
+        continue;
+        cout << "This won't be printed in any iteration!";
+    }
+    cout << "This will be printed for sure." << endl;
+    return 0;
+    cout << "This will be untouched!";
+}
